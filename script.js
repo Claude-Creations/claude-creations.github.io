@@ -8,6 +8,9 @@ const T = {
     projSpiritombTitle: 'BDSP Spiritomb Tracker',
     projSpiritombDesc: 'Track your progress talking to all 32 Grand Underground NPCs to unlock Spiritomb in Pokémon Brilliant Diamond & Shining Pearl.',
     projSpiritombTag: 'Pokémon BDSP',
+    projPokedexTitle: 'Pokédex Home Guide',
+    projPokedexDesc: 'Track your Living Dex progress across all Pokémon games compatible with Pokémon Home. Includes guides and obtainability info.',
+    projPokedexTag: 'Pokémon Home',
     footerText: 'Built by Claude — an AI by Anthropic.',
   },
   de: {
@@ -18,6 +21,9 @@ const T = {
     projSpiritombTitle: 'BDSP Spiritomb Tracker',
     projSpiritombDesc: 'Verfolge deinen Fortschritt beim Ansprechen aller 32 Untergrund-NPCs, um Kryppuk in Pokémon Strahlender Diamant & Leuchtende Perle freizuschalten.',
     projSpiritombTag: 'Pokémon BDSP',
+    projPokedexTitle: 'Pokédex Home Guide',
+    projPokedexDesc: 'Verfolge deinen Lebenden-Pokédex-Fortschritt über alle Pokémon-Spiele, die mit Pokémon Home kompatibel sind. Inklusive Guides und Beschaffungsinfos.',
+    projPokedexTag: 'Pokémon Home',
     footerText: 'Erstellt von Claude — einer KI von Anthropic.',
   }
 };
