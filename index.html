@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Claude Creations — a collection of small web tools and projects built by Claude, an AI by Anthropic.">
+  <title>Claude Creations</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧩</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="cc-header">
+    <div class="cc-header-left">
+      <a href="/">
+        <span class="cc-logo">Claude Creations</span>
+      </a>
+    </div>
+    <div class="cc-lang-switcher">
+      <button class="cc-lang-btn" data-lang="en" onclick="setLanguage('en')" title="English">🇬🇧</button>
+      <button class="cc-lang-btn" data-lang="de" onclick="setLanguage('de')" title="Deutsch">🇩🇪</button>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="cc-main">
+
+    <!-- Hero -->
+    <section class="cc-hero">
+      <h1 data-i18n="heroTitle">Claude Creations</h1>
+      <p data-i18n="heroDesc">A collection of small web tools and projects — built by Claude, an AI by Anthropic.</p>
+    </section>
+
+    <!-- Gaming Tools -->
+    <section class="category-section">
+      <h2 class="category-title" data-i18n="catGaming">Gaming Tools</h2>
+      <div class="project-grid">
+        <a class="project-card" href="https://claude-creations.github.io/bdsp-spiritomb-tracker/">
+          <span class="project-card-icon">👻</span>
+          <h3 data-i18n="projSpiritombTitle">BDSP Spiritomb Tracker</h3>
+          <p data-i18n="projSpiritombDesc">Track your progress talking to all 32 Grand Underground NPCs to unlock Spiritomb in Pokémon Brilliant Diamond &amp; Shining Pearl.</p>
+          <span class="project-card-tag" data-i18n="projSpiritombTag">Pokémon BDSP</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="cc-footer">
+    <span data-i18n="footerText">Built by Claude — an AI by Anthropic.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+/* ===== Claude Creations – Shared Design System ===== */
+:root {
+  --cc-primary: #4f46e5;
+  --cc-primary-light: #6366f1;
+  --cc-primary-dark: #3730a3;
+  --cc-accent: #7c3aed;
+  --cc-bg: #f8fafc;
+  --cc-surface: #ffffff;
+  --cc-surface-hover: #f1f5f9;
+  --cc-text: #1e293b;
+  --cc-text-secondary: #64748b;
+  --cc-border: #e2e8f0;
+  --cc-success: #10b981;
+  --cc-success-bg: #ecfdf5;
+  --cc-warning: #f59e0b;
+  --cc-radius: 12px;
+  --cc-radius-sm: 8px;
+  --cc-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --cc-shadow-md: 0 4px 6px rgba(0,0,0,0.07), 0 2px 4px rgba(0,0,0,0.06);
+  --cc-shadow-lg: 0 10px 15px rgba(0,0,0,0.08), 0 4px 6px rgba(0,0,0,0.05);
+  --cc-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --cc-transition: 0.2s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--cc-font);
+  background: var(--cc-bg);
+  color: var(--cc-text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== Header ===== */
+.cc-header {
+  background: var(--cc-surface);
+  border-bottom: 1px solid var(--cc-border);
+  padding: 0 24px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--cc-shadow);
+}
+
+.cc-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cc-header-left a {
+  text-decoration: none;
+  color: var(--cc-text);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cc-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cc-primary);
+}
+
+.cc-lang-switcher {
+  display: flex;
+  gap: 4px;
+  background: var(--cc-bg);
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.cc-lang-btn {
+  border: none;
+  background: transparent;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background var(--cc-transition);
+  line-height: 1;
+}
+
+.cc-lang-btn:hover { background: var(--cc-border); }
+
+.cc-lang-btn.active {
+  background: var(--cc-primary);
+  box-shadow: var(--cc-shadow);
+}
+
+/* ===== Main Content ===== */
+.cc-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 20px 80px;
+}
+
+/* ===== Hero ===== */
+.cc-hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.cc-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--cc-text);
+  margin-bottom: 12px;
+}
+
+.cc-hero p {
+  font-size: 1.1rem;
+  color: var(--cc-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== Category Sections ===== */
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cc-text-secondary);
+  margin-bottom: 16px;
+  padding-left: 4px;
+}
+
+/* ===== Project Cards ===== */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  background: var(--cc-surface);
+  border-radius: var(--cc-radius);
+  border: 1px solid var(--cc-border);
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--cc-transition);
+  box-shadow: var(--cc-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-card:hover {
+  box-shadow: var(--cc-shadow-lg);
+  transform: translateY(-2px);
+  border-color: var(--cc-primary-light);
+}
+
+.project-card-icon {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cc-text);
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: var(--cc-text-secondary);
+  line-height: 1.5;
+}
+
+.project-card-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--cc-primary);
+  background: #eef2ff;
+  padding: 2px 10px;
+  border-radius: 12px;
+  align-self: flex-start;
+  margin-top: 4px;
+}
+
+/* ===== Footer ===== */
+.cc-footer {
+  text-align: center;
+  padding: 24px 20px;
+  color: var(--cc-text-secondary);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--cc-border);
+  margin-top: 40px;
+}
+
+.cc-footer a {
+  color: var(--cc-primary);
+  text-decoration: none;
+}
+
+.cc-footer a:hover { text-decoration: underline; }
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .cc-header { padding: 0 16px; }
+  .cc-main { padding: 28px 14px 60px; }
+  .cc-hero h1 { font-size: 1.75rem; }
+  .cc-hero p { font-size: 1rem; }
+  .project-grid { grid-template-columns: 1fr; }
+}
