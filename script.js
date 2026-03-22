@@ -23,10 +23,14 @@ const T = {
 };
 
 const LANG_KEY = 'cc-language';
+const THEME_KEY = 'cc-theme';
 let currentLang = 'en';
+let currentTheme = 'light';
 
 function init() {
+  loadTheme();
   loadLanguage();
+  applyTheme();
   applyLanguage();
 }
 
@@ -62,6 +66,28 @@ function applyLanguage() {
   document.querySelectorAll('.cc-lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === currentLang);
   });
+}
+
+// ===== Theme =====
+function loadTheme() {
+  const saved = localStorage.getItem(THEME_KEY);
+  if (saved === 'dark' || saved === 'light') {
+    currentTheme = saved;
+  } else {
+    currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+}
+
+function toggleTheme() {
+  currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  localStorage.setItem(THEME_KEY, currentTheme);
+  applyTheme();
+}
+
+function applyTheme() {
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  const btn = document.getElementById('theme-btn');
+  if (btn) btn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
 }
 
 document.addEventListener('DOMContentLoaded', init);
